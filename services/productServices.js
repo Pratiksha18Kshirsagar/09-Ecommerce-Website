@@ -7,7 +7,10 @@ let getProductById =(req, res)=> {
 }
 
 let addProduct = (req, res) =>{
-  return 'Adding a new product';
+  let data = req.body;
+  console.log("Product data received:", data);
+  // Here, you would typically add the product to your database
+  res.json({value: data.productName });
 }
 
 

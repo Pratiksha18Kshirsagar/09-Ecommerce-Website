@@ -3,6 +3,11 @@ let app = express();
 let userRoutes = require('./routes/userRoutes');
 let productRoutes = require('./routes/productRoutes');
 let cartRoutes = require('./routes/cartRoutes');
+let path = require('path');
+
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
 
 app.use('/users', userRoutes);
 app.use('/products', productRoutes);
