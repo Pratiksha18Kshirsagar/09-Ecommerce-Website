@@ -2,8 +2,13 @@ let getAllProducts =(req, res)=> {
   return "Fetching all products";
 }
 
-let getProductById =(req, res)=> {
-  return `Fetching product with ID:${req.params.id}`;
+let getProductById =(req, res,next)=> {
+  if(req.params.id){
+    return `Fetching product with ID:${req.params.id}`;
+  }
+  else{
+    next(error);
+  }
 }
 
 let addProduct = (req, res) =>{
