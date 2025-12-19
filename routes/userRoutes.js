@@ -1,15 +1,10 @@
 let express = require('express');
 let router = express.Router();
-
+let {getUser, getUserById,addUser} = require('../controllers/userController');
 
 // Define routes for user operations        
-router.get('/' , (req, res) => {
-  res.send("Fetching all users");
-});
-router.get('/:id', (req, res) => {
-  res.send(`Fetching user with ID:${req.params.id}`);
-});
-router.post('/', (req, res) => {
-  res.send("Adding a new User");
-});
+router.get('/' , getUser);
+router.get('/:id', getUserById);
+router.post('/',addUser);
+
 module.exports = router;
