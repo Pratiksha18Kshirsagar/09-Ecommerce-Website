@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
-let { getProducts,getProductById ,addProduct} = require('../controllers/productController');
+let { getAllProducts,getProductById ,addProduct} = require('../controllers/productController');
 
-// Define a route for getting user information
-router.get('/', getProducts);
+// Define a route for getting all products
+router.get('/', getAllProducts);
 
 // Define a route for getting a specific product by ID
 router.get('/:id', getProductById);     

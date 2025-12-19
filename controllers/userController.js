@@ -1,5 +1,5 @@
 
-let getUser = (req, res) => {
+let getAllUser = (req, res) => {
   res.send("Fetching all users");
 }
 
@@ -11,4 +11,4 @@ let addUser =  (req, res) => {
   res.send("Adding a new User");
 }
 
-module.exports = {getUser, getUserById, addUser}
+module.exports = {getAllUser, getUserById, addUser}
